@@ -1,4 +1,3 @@
-```dart
 import 'package:flutter/material.dart';
 import 'package:waylo/screens/itinerary_screen.dart';
 
@@ -49,5 +48,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-```
