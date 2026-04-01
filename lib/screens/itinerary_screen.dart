@@ -1,4 +1,3 @@
-```dart
 import 'package:flutter/material.dart';
 
 class ItineraryScreen extends StatefulWidget {
@@ -36,5 +35,3 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
     );
   }
 }
-
-```
