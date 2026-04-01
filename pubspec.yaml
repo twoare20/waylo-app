@@ -1,31 +1,26 @@
-```yml
+````yaml
 name: waylo
 description: WAYLO 국내 여행 AI 일정 추천 앱
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.18.2 <3.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-
-  # 카카오맵 연동
-  flutter_kakao_map: ^1.0.0
-
-  # Material Design 3
-  flutter/material.dart:
+  cupertino_icons: ^1.0.6
+  http: ^1.2.0
+  google_maps_flutter: ^2.5.0
+  geolocator: ^11.0.0
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^3.0.0
 
-  # 빌드 관련
-  flutter_launcher_icons: ^0.10.0
-
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/icon.png"
-
-```
+flutter:
+  uses-material-design: true
+````
