@@ -1,4 +1,3 @@
-```dart
 import 'package:flutter/material.dart';
 import 'package:waylo/screens/home_screen.dart';
 
@@ -21,5 +20,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-```
