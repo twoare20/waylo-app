@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:waylo/screens/home_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(const WayloApp());
