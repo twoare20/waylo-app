@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:waylo/screens/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const WayloApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class WayloApp extends StatelessWidget {
+  const WayloApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WAYLO',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
