@@ -1,36 +1,53 @@
 import 'package:flutter/material.dart';
 
-class ItineraryScreen extends StatefulWidget {
+class ItineraryScreen extends StatelessWidget {
   final String destination;
+  final List<Map<String, dynamic>> itinerary;
 
-  const ItineraryScreen({Key? key, required this.destination}) : super(key: key);
+  const ItineraryScreen({
+    super.key,
+    required this.destination,
+    required this.itinerary,
+  });
 
-  @override
-  State<ItineraryScreen> createState() => _ItineraryScreenState();
-}
-
-class _ItineraryScreenState extends State<ItineraryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.destination),
+        title: Text(destination),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            const Text('AI가 생성한 3박 4일 일정'),
-            const SizedBox(height: 16),
-            // 일정 표시
-            ElevatedButton(
-              onPressed: () {
-                // 일정 변경 버튼
-              },
-              child: const Text('일정 변경'),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(16),
+        itemCount: itinerary.length,
+        itemBuilder: (context, index) {
+          final day = itinerary[index];
+          return Card(
+            margin: const EdgeInsets.only(bottom: 16),
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Day ${index + 1}',
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    day['description'] ?? '',
+                    style: const TextStyle(fontSize: 14),
+                  ),
+                ],
+              ),
             ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }
