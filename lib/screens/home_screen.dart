@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:waylo/screens/itinerary_screen.dart';
+import 'itinerary_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (destination.isEmpty) return;
 
     final itinerary = [
-      {'description': '${destination} 도착 및 숙소 체크인. 주변 맛집 탐방.'},
+      {'description': '$destination 도착 및 숙소 체크인. 주변 맛집 탐방.'},
       {'description': '오전 주요 관광지 방문. 오후 자유 시간.'},
       {'description': '인근 명소 투어. 저녁 특산물 식사.'},
       {'description': '마지막 쇼핑 후 귀가.'},
@@ -48,7 +48,10 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             const Text(
               '어디로 여행 갈까요?',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const SizedBox(height: 32),
             TextField(
@@ -74,7 +77,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                child: const Text('일정 만들기', fontSize: 16),
+                child: const Text(
+                  '일정 만들기',
+                  style: TextStyle(fontSize: 16),
+                ),
               ),
             ),
           ],
