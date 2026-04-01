@@ -10,29 +10,22 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # 카카오맵 연동
+  flutter_kakao_map: ^1.0.0
+
   # Material Design 3
-  flutter/material.dart: ^1.0.0
-
-  # 토스 스타일 UI
-  google_fonts/google_fonts.dart: ^3.0.1
-
-  # 지도 라이브러리
-  flutter_map/flutter_map.dart: ^0.14.0
-
-  # AI 엔진
-  # tensorflow/tensorflow.dart: ^0.1.0 (미사용)
+  flutter/material.dart:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^1.0.0
+  # 빌드 관련
+  flutter_launcher_icons: ^0.10.0
 
-flutter:
-  uses-material-design: true
-  fonts:
-    - family: NotoSansKR
-      fonts:
-        - asset: assets/fonts/NotoSansKR-Bold.otf
-        - asset: assets/fonts/NotoSansKR-Regular.otf
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
+
 ```
