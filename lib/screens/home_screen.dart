@@ -10,8 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final _destinationController = TextEditingController();
-  final _recentSearches = [];
+  final _textController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             TextField(
-              controller: _destinationController,
+              controller: _textController,
               decoration: const InputDecoration(
                 labelText: '목적지 입력',
                 border: OutlineInputBorder(),
@@ -35,26 +34,20 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ItineraryScreen(destination: _destinationController.text)),
+                  MaterialPageRoute(builder: (context) => ItineraryScreen(destination: _textController.text)),
                 );
               },
               child: const Text('검색'),
             ),
             const SizedBox(height: 16),
-            Expanded(
-              child: ListView.builder(
-                itemCount: _recentSearches.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(_recentSearches[index]),
-                  );
-                },
-              ),
-            ),
+            const Text('최근 목적지 목록'),
+            const SizedBox(height: 8),
+            // 최근 목적지 목록 표시
           ],
         ),
       ),
     );
   }
 }
+
 ```
